@@ -1,25 +1,21 @@
+/*
+ * @Author: qinsensen
+ * @Date: 2020-06-23 15:32:02
+ * @LastEditors: qinsensen
+ * @LastEditTime: 2020-06-23 17:45:09
+ * @Description: 
+ */ 
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import { Switch, BrowserRouter } from 'react-router-dom';
+import { renderRoutes } from 'react-router-config';
+import routes from './routes';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        { renderRoutes(routes)}
+      </Switch>
+    </BrowserRouter>
   );
 }
 

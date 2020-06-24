@@ -1,17 +1,21 @@
+/*
+ * @Author: qinsensen
+ * @Date: 2020-06-23 15:32:02
+ * @LastEditors: qinsensen
+ * @LastEditTime: 2020-06-23 16:18:54
+ * @Description: 
+ */ 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
+import { setRem } from './utils/util.rem';
+import './style/common/rest.less'
+setRem(750, 100)
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
