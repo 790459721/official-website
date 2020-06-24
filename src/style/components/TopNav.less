@@ -1,0 +1,58 @@
+@greenColor: #61B147;
+.top_nav_box {
+    font-size: .3rem;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: .9rem;
+    padding: 0 .31rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: greenColor;
+    background: #fff;
+    .top_nav_left {
+        display: flex;
+        align-items: center;
+        .top_logo_box {
+            display: flex;
+            align-items: center;
+            .logo {
+                width: .51rem;
+                height: .43rem;
+                background: url('../../assets/img/top_logo.png') no-repeat center;
+                background-size: contain;
+                margin: 0 .08rem 0 .37rem;
+            }
+            .logo_slogan {
+                width: 3.51rem;
+                height: .3rem;
+                background: url('../../assets/img/top_slogan.png') no-repeat center;
+                background-size: contain;
+            }
+        }
+        .menu {
+            width: .42rem;
+            height: .34rem;
+            background: url('../../assets/img/top_menu.png') no-repeat center;
+            background-size: contain;
+        }
+    }
+    .btn_download {
+        padding: 0 .16rem;
+        height: .42rem;
+        background: @greenColor;
+        color: #fff;
+        outline: none;
+        border: 0;
+        border-radius: .21rem;
+        font-size: .24rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}

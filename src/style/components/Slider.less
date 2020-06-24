@@ -3,6 +3,7 @@
     height: 4.2rem;
     overflow: hidden;
     transform:translate3d(0,0,0);
+    position: relative;
     .swiper-wrapper {
         display: flex;
         width: 100%;
@@ -13,25 +14,15 @@
             flex-shrink: 0;
             background: #399;
             transform:translate3d(0,0,0);
-        }
-    }
-    .slider_point_box {
-        position: absolute;
-        z-index: 2;
-        display: flex;
-        left: 50%;
-        top: 95%;
-        box-sizing: border-box;
-        transform: translate(-50%, -95%);
-        .slider_point_item {
-            width: .12rem;
-            height: .12rem;
-            border-radius: 50%;
-            background: grey;
-            margin: 0 .05rem;
-            &.active {
-                background: #fff;
+            & > img {
+                width: 100%;
+                height: 100%;
             }
         }
     }
+    .my-bullet-active {
+        background: #fff;
+        opacity: 1;
+    }
+
 }
