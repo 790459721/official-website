@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-06-24 22:44:24
- * @LastEditTime: 2020-06-25 01:25:46
+ * @LastEditTime: 2020-06-26 00:34:34
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \official-website\src\components\Slider.js
@@ -11,11 +11,17 @@ import '../style/components/Slider.less'
 // import imgUrl from '../images/home_banner_1.jpg'
 import Swiper from 'swiper'
 import 'swiper/css/swiper.min.css'
-import { homeImgUrlList } from '../const/imgUrl'
+// import { homeImgUrlList } from '../const/imgUrl'
 class Slider extends React.Component {
-
+    constructor(props) {
+        super(props)
+        this.state = {
+            // imgList: this.props.imgList
+        }
+    }
     componentDidMount() {
-        new Swiper('.slider_container',{
+        const { name } = this.props
+        new Swiper(`.${name}`,{
             loop:true,
             autoplay: {
                 delay: 5000,
@@ -30,13 +36,14 @@ class Slider extends React.Component {
         })
     }
     render() {
+        const { imgList, width = null, height = null, name } = this.props
         return (
-            <div className="swiper-container slider_container">
+            <div className={`swiper-container slider_container ${name}`} style={{height: `${height ? height + 'rem' : '4.2rem'}`}}>
             <div className="swiper-wrapper">
                 {
-                    homeImgUrlList.map((item,index) => (
+                    imgList.map((item,index) => (
                         <div className="swiper-slide" key={index}>
-                            <img src={item.imgUrl} alt=""/>
+                            <img src={item.imgUrl} alt="" style={{width: `${width ? width + 'rem' : '100%'}`}}/>
                         </div>
                     ))
                 }

@@ -1,4 +1,147 @@
 .home_wrapper {
-    padding-top: .9rem;
-    position: relative;
+    .section_introduction {
+        padding: 0 .5rem ;
+        font-size: .3rem;
+        font-weight:400;
+        color:rgba(102,102,102,1);
+        line-height: .52rem;
+        text-indent: .6rem;
+        text-align: justify;
+    }
+    .introduction_check_more {
+        padding: 0 .5rem ;
+        color: #FA8D2D;
+        font-size:.24rem;
+        font-weight:400;
+        color:rgba(250,141,45,1);
+        line-height: .42rem;
+        text-align: right;
+    }
+    .mission_banner {
+        width: 6.68rem;
+        height: 2.92rem;
+        border-radius: .06rem;
+        background: url('../../assets/img/mission_banner.png') no-repeat center;
+        background-size: contain;
+        margin: 0 auto 1.4rem;
+        border: .01rem solid transparent;
+        .mission_content {
+            width: 5.41rem;
+            height: 2.47rem;
+            background:rgba(255,255,255,1);
+            box-shadow:0rem .06rem .21rem 0rem rgba(0, 0, 0, 0.08);
+            border-radius: .06rem;
+            margin: 1.74rem auto 0;
+            overflow: hidden;
+            .content_icon {
+                width: .29rem;
+                height: .25rem;
+                margin: .43rem auto .39rem;
+                background:url('../../assets/img/home_down.png') no-repeat center;
+                background-size: contain;
+            }
+            p {
+                font-size:.3rem;
+                font-weight:400;
+                color:rgba(51,51,51,1);
+                line-height:.56rem;
+                text-align: center;
+            }
+        }
+    }
+    .values_container {
+        padding: 0 .31rem;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .values_item {
+            flex-shrink: 0;
+            width: 3.29rem;
+            height: 3rem;
+            background:rgba(255,255,255,1);
+            box-shadow:0 .06rem .21rem 0 rgba(153,153,153,0.08);
+            margin-bottom: .73rem;
+            .item_img {
+                width: 100%;
+                height: 2.2rem;
+            }
+            .item_text {
+                font-size:.3rem;
+                font-weight:400;
+                color:rgba(51,51,51,1);
+                text-align: center;
+                margin-top: .25rem;
+            }
+            &:nth-of-type(3), &:nth-of-type(4) {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .team_container {
+        padding: 0 .3rem;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .item_img {
+            width: 3.3rem;
+            height: 2.07rem;
+            &:last-of-type {
+                width: auto;
+                margin-top: .3rem;
+            }
+        }
+    }
+    .partner_link_container {
+        width: 100%;
+        height: 1.68rem;
+        background: #61B147;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: .75rem;
+        margin-bottom: .73rem;
+        .link_split {
+            height: 1rem;
+            width: .01rem;
+            background: #FEFAF1;
+        }
+        .partner_link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &:nth-child(1) {
+                .link_icon {
+                    width: .36rem;
+                    height: .36rem;
+                    background: url('../../assets//img/icon_data.png') no-repeat center;
+                    background-size: contain;
+                    margin-bottom: .19rem;
+                }
+            }
+            &:nth-child(3) {
+                .link_icon {
+                    width: .46rem;
+                    height: .34rem;
+                    background: url('../../assets//img/icon_cloud.png') no-repeat center;
+                    background-size: contain;
+                    margin-bottom: .25rem;
+                }
+            }
+            &:nth-child(5) {
+                .link_icon {
+                    width: .42rem;
+                    height: .42rem;
+                    background: url('../../assets//img/icon_ai.png') no-repeat center;
+                    background-size: contain;
+                    margin-bottom: .23rem;
+                }
+            }
+            & > p {
+                font-size:.24rem;
+                font-weight:400;
+                color:rgba(255,255,255,1);
+                line-height:.36rem;
+            }
+        }
+    }
 }

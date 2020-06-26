@@ -1,0 +1,97 @@
+.footer_container {
+    .partner_link_container {
+        width: 100%;
+        height: 1.68rem;
+        background: #61B147;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: .75rem;
+        margin-bottom: .73rem;
+        .link_split {
+            height: 1rem;
+            width: .01rem;
+            background: #FEFAF1;
+        }
+        .partner_link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &:nth-child(1) {
+                .link_icon {
+                    width: .36rem;
+                    height: .36rem;
+                    background: url('../../assets//img/icon_data.png') no-repeat center;
+                    background-size: contain;
+                    margin-bottom: .19rem;
+                }
+            }
+            &:nth-child(3) {
+                .link_icon {
+                    width: .46rem;
+                    height: .34rem;
+                    background: url('../../assets//img/icon_cloud.png') no-repeat center;
+                    background-size: contain;
+                    margin-bottom: .25rem;
+                }
+            }
+            &:nth-child(5) {
+                .link_icon {
+                    width: .42rem;
+                    height: .42rem;
+                    background: url('../../assets//img/icon_ai.png') no-repeat center;
+                    background-size: contain;
+                    margin-bottom: .23rem;
+                }
+            }
+            & > p {
+                font-size:.24rem;
+                font-weight:400;
+                color:rgba(255,255,255,1);
+                line-height:.36rem;
+            }
+        }
+    }
+    .lable_title {
+        font-size: .3rem;
+        color: #333;
+        font-weight: 500;
+        padding-left: .3rem;
+    }
+    .quality_info {
+        margin: .46rem 0 .69rem;
+        padding: 0 .46rem 0 .3rem;
+        p {
+            font-size: .26rem;
+            color: #444;
+            line-height: .42rem;
+            &:last-child {
+                font-size: .23rem;
+            }
+        }
+        
+    }
+    .address_info {
+        margin: .46rem 0;
+        padding: 0 .46rem 0 .3rem;
+        p {
+            font-size: .26rem;
+            color: #444;
+            line-height: .42rem;
+        }
+    }
+    .public_code_container {
+        padding: 0 .3rem .37rem;
+        .code_text {
+            font-size:.24rem;
+            font-weight:400;
+            color:rgba(102,102,102,1);
+            line-height:.21rem;
+            margin-top: .13rem;
+        }
+        .code_img {
+            width:1.08rem;
+            height:1.08rem;
+        }
+    }
+}

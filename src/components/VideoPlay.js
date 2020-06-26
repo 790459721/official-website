@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-06-25 02:25:21
- * @LastEditTime: 2020-06-25 03:36:35
+ * @LastEditTime: 2020-06-25 15:07:55
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \official-website\src\components\VideoPlay.js
@@ -21,7 +21,7 @@ class VideoPlay extends Component {
                 <video className='video_play'
                     muted
                     controls
-                    playsinline="true"
+                    playsInline
                     webkit-playsinline="true"
                     x5-playsinline="true"
                     x-webkit-airplay="allow"
