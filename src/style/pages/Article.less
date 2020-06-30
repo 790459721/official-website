@@ -9,17 +9,6 @@
         height: 1.32rem;
         overflow: hidden;
         position: relative;
-        &::after {
-            content: "";
-            width: 6.5rem;
-            height: 0.02rem;
-            background: #DBDBDB;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-            }
         .tabbar_box {
             margin: 0 auto;
             height: 1.5rem;
@@ -36,6 +25,7 @@
                 position: relative;
                 &.active {
                     color: #63B149;
+                    font-weight: bold;
                     &::after{
                         content: "";
                         width: 100%;

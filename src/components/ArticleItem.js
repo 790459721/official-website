@@ -9,9 +9,9 @@
 import React from 'react'
 import '../style/components/ArticleItem.less'
 function ArticleItem(props) {
-    const { data } = props
+    const { data, jumpToDetal, articleType } = props
     return (
-        <div className="article_item_box">
+        <div className="article_item_box" onClick={() => jumpToDetal(articleType, data.id)}>
             <img src={data.imageUrl} className="item_left_img" alt=''></img>
             <div className="item_right_info">
                 <div className="info_title">{data.title}</div>

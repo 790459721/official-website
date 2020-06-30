@@ -70,9 +70,39 @@ const partnerImgUrlList = [
         imgUrl: partner3
     },
 ]
+const gloryList = [
+    {
+        imgUrl: require('../assets/img/glory-1.png')
+    },
+    {
+        imgUrl: require('../assets/img/glory-2.png')
+    },
+    {
+        imgUrl: require('../assets/img/glory-3.png')
+    },
+]
+const propertyList = [
+    {
+        imgUrl: require('../assets/img/property-1.png')
+    },
+    {
+        imgUrl: require('../assets/img/property-2.png')
+    },
+    {
+        imgUrl: require('../assets/img/property-3.png')
+    },
+    {
+        imgUrl: require('../assets/img/property-4.png')
+    },
+    {
+        imgUrl: require('../assets/img/property-5.png')
+    },
+]
 export {
     homeImgUrlList,
     valuesImgUrlList,
     teamImgUrlList,
-    partnerImgUrlList
+    partnerImgUrlList,
+    gloryList,
+    propertyList
 }

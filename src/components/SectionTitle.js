@@ -12,7 +12,7 @@ function SectionTitle(props) {
     const {title} = props
     return (
         <div className='section_title_box'>
-            <h5>{title}</h5>
+            <h5>{title || 'test'}</h5>
             <div className='underline'></div>
         </div>
     )

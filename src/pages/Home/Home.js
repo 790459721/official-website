@@ -6,7 +6,7 @@
  * @Description: In User Settings Edit
  * @FilePath: \official-website\src\pages\Home\Home.js
  */
-import React from 'react'
+import React,{useEffect} from 'react'
 import '../../style/pages/Home.less'
 import Slider from '../../components/Slider';
 import SectionTitle from '../../components/SectionTitle';
@@ -14,13 +14,15 @@ import VideoPlay from '../../components/VideoPlay';
 import { homeImgUrlList, valuesImgUrlList, teamImgUrlList, partnerImgUrlList } from '../../const/imgUrl'
 import Footer from '../../components/Footer';
 function Home(props) {
+    useEffect(() => {
+        document.documentElement.scrollTop = 0
+    }, [])
     const navigateToAbout = () => {
-        console.log(props);
         props.history.push('/about')
     }
     return (
         <div className='home_wrapper'>
-            <Slider imgList={homeImgUrlList} name={'banner_container'}/>
+            <Slider imgList={homeImgUrlList} name={'banner_container'} containerHeight={4.3} slideHeight={4.3}/>
             <SectionTitle title={'公司简介'} />
             <VideoPlay />
             <div className='section_introduction'>
@@ -61,7 +63,7 @@ function Home(props) {
                 }
             </div>
             <SectionTitle title={'合作伙伴'} />
-            <Slider imgList={partnerImgUrlList} width={7.2} height={5.6} name={'partner_container'}/>
+            <Slider imgList={partnerImgUrlList} width={7.2} containerHeight={5.6} name={'partner_container'} />
             <div className="partner_link_container">
                 <div className="partner_link">
                     <div className="link_icon"></div>

@@ -14,35 +14,58 @@ import { useState } from 'react'
 import ArticleItem from '../../components/ArticleItem'
 import Footer from '../../components/Footer'
 import * as listData from '../../const/articleList'
-function Article() {
+import { routeJump } from '../../utils/util.route.handle'
+function Article(props) {
     const [currentIndex, setCurrentIndex] = useState(0)
     const [articleList, setArticleList ] = useState([])
+    const [articleType, setArticelType] = useState(0)
+    useEffect(() => {
+        document.documentElement.scrollTop = 0
+    }, [])
     useEffect(() => {
         switch (currentIndex) {
-            case 0:
+            case 0: // 公司资讯
+                setArticelType(0)
                 setArticleList([...listData.companyNews])
                 break;
-            case 1:
+            case 1: // 投保策略
+                setArticelType(1)
                 setArticleList([...listData.plot])
                 break;
-            case 2:
+            case 2: // 产品测评
+                setArticelType(2)
                 setArticleList([...listData.evaluation])
                 break;
-            case 3:
+            case 3: // 理赔案例
+                setArticelType(3)
                 setArticleList([...listData.cases])
                 break;
-            case 4:
+            case 4: // 监管动态
+                setArticelType(4)
                 setArticleList([...listData.trend])
                 break;
-            case 5:
+            case 5: // 避坑指南
+                setArticelType(5)
                 setArticleList([...listData.guide])
                 break;
             default:
+                setArticelType(0)
                 setArticleList([])
                 break;
         }
-    },[currentIndex])
+    },[currentIndex,articleType])
+    // 跳转
+    const jumpToDetal = (articleType, articleId) => {
+        routeJump(props,{
+            url: '/articleDetail',
+            params: {
+                articleType,
+                articleId,
+            }
+        })
+    }
     const boxRef = useRef()
+    // 点击tab
     const filterBarClick = (item,index) => {
         setCurrentIndex(index)
         //获取标签父元素DOM
@@ -88,7 +111,7 @@ function Article() {
             <div className="article_list">
                 {
                     articleList.map(item => (
-                        <ArticleItem key={item.id} data={item}/>
+                        <ArticleItem key={item.id} data={item} jumpToDetal={jumpToDetal} articleType={currentIndex}/>
                     ))
                 }
             </div>

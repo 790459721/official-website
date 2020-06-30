@@ -12,6 +12,7 @@ import '../style/components/Footer.less'
 function Footer() {
     return (
         <div className="footer_container">
+            <div className="footer_split"></div>
             <h3 className="lable_title">资质信息</h3>
             <div className="quality_info">
                 <p>保险销售许可：善康禾诺保险经纪有限公司</p>
@@ -27,7 +28,7 @@ function Footer() {
                 <p>地&emsp;&emsp;&ensp;址：上海市浦东新区亮秀路112号Y1座505室</p>
             </div>
             <div className="public_code_container">
-                <img className="code_img" src={codeImg}></img>
+                <img className="code_img" src={codeImg} alt=''></img>
                 <div className="code_text">大树保公众号</div>
             </div>
         </div>

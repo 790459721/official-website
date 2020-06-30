@@ -19,13 +19,13 @@ class VideoPlay extends Component {
         return (
             <div className='video_box'>
                 <video className='video_play'
-                    muted
                     controls
                     playsInline
                     webkit-playsinline="true"
                     x5-playsinline="true"
                     x-webkit-airplay="allow"
                     id='play_vidoe'
+                    poster={require('../assets/img/video_poster.jpeg')}
                 >
                     <source src={videoUrl} />
                 </video>
