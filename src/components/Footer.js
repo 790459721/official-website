@@ -7,7 +7,9 @@
  * @FilePath: \official-website\src\components\Footer.js
  */ 
 import React from 'react'
-import codeImg from '../assets/img/public_code.jpg'
+import publicCodeImg from '../assets/img/public_code.jpg'
+import lianmengCodeImg from '../assets/img/lianmeng_app_code.png'
+import healthCodeImg from '../assets/img/health_app_code.png'
 import '../style/components/Footer.less'
 function Footer() {
     return (
@@ -28,8 +30,18 @@ function Footer() {
                 <p>地&emsp;&emsp;&ensp;址：上海市浦东新区亮秀路112号Y1座505室</p>
             </div>
             <div className="public_code_container">
-                <img className="code_img" src={codeImg} alt=''></img>
-                <div className="code_text">大树保公众号</div>
+                <div className="code_box">
+                    <img className="code_img" src={publicCodeImg} alt=''></img>
+                    <div className="code_text">大树保公众号</div>
+                </div>
+                <div className="code_box">
+                    <img className="code_img" src={lianmengCodeImg} alt=''></img>
+                    <div className="code_text">大树保联盟APP</div>
+                </div>
+                <div className="code_box">
+                    <img className="code_img" src={healthCodeImg} alt=''></img>
+                    <div className="code_text">大树保健康APP</div>
+                </div>
             </div>
         </div>
     )
